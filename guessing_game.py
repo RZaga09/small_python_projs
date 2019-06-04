@@ -42,4 +42,3 @@ while loop == True:
 			print('Enter a number')
 			loop2 = True
 			continue
-	break
