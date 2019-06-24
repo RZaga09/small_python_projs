@@ -14,7 +14,7 @@ def check(x):
 		num_li.append(i)
 	if x % int(str(num_li[0]) + str(num_li[len(num_li) - 1])) == 0:
 		if len(num_li) >= 3:
-			print(f'Nearest Gapful Number = {x}')
+			print(f'Next Gapful Number = {x}')
 		else:
 			y += 1
 			x = z + y
