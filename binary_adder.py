@@ -39,17 +39,18 @@ binary_b = list(reversed(convert_to_binary(b)))
 sum = []
 c = 0
 
+
 for i in range(0, min(len(binary_a), len(binary_b))):
     s, c = full_adder(binary_a[i], binary_b[i], c)
     sum.append(s)
 
 if len(binary_a) > len(binary_b):
     for i in range(len(binary_b), len(binary_a)):
-        s = c + binary_a[i]
+        s, c = half_adder(binary_a[i], c)
         sum.append(s)
 elif len(binary_b) > len(binary_a):
     for i in range(len(binary_a), len(binary_b)):
-        s = c + binary_b[i]
+        s, c = half_adder(binary_b[i], c)
         sum.append(s)
 else:
     sum.append(c)
